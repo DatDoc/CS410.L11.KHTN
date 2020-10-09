@@ -13,12 +13,12 @@ def create_gen(population_size):
 
 
 # calculate fitness of gen
-def calculate_fitness(gen, target, panjang_target):
+def calculate_fitness(gen, target, population_size):
     fitness = 0
-    for i in range(panjang_target):
+    for i in range(population_size):
         if gen[i:i + 1] == target[i:i + 1]:
             fitness += 1
-    fitness = fitness / panjang_target * 100
+    fitness = fitness / population_size * 100
     return fitness
 
 
@@ -46,12 +46,12 @@ def selection(populasi):
 
 
 # crossover
-def crossover(parent, target, panjang_target):
+def crossover(parent, target, population_size):
     child = {}
     cp = round(len(list(parent)[0]) / 2)
     for i in range(2):
         gen = list(parent)[i][:cp] + list(parent)[1 - i][cp:]
-        genfitness = calculate_fitness(gen, target, panjang_target)
+        genfitness = calculate_fitness(gen, target, population_size)
         child[gen] = genfitness
     return child
 
