@@ -57,16 +57,16 @@ def crossover(parent, target, population_size):
 
 
 # mutation
-def mutation(child, target, mutation_rate, panjang_target):
+def mutation(child, target, mutation_rate, population_size):
     mutant = {}
     for i in range(len(child)):
         data = list(list(child)[i])
         for j in range(len(data)):
             if np.random.rand(1) <= mutation_rate:
-                ch = chr(np.random.randint(32, 126))
+                ch = chr(random.randint(0, 1))
                 data[j] = ch
         gen = ''.join(data)
-        genfitness = calculate_fitness(gen, target, panjang_target)
+        genfitness = calculate_fitness(gen, target, population_size)
         mutant[gen] = genfitness
     return mutant
 
@@ -111,8 +111,8 @@ print('Mutation Rate :', mutation_rate)
 population_size = 40
 startTime = datetime.datetime.now()
 print('----------------------------------------------')
-print('{}\t{}\t{}'.format('The Best', 'Fitness', 'Time'))
-print('----------------------------------------------')
+print('{}\t\t\t\t\t{}\t{}'.format('The Best', 'Fitness', 'Time'))
+print('-------------------------------------------------------------------')
 
 success = False
 while not success:
