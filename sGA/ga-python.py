@@ -19,6 +19,9 @@ def calculate_fitness(offstring, option):
     if option == "onemax":
         fitness = np.sum(offstring)
     else:
+        group = []
+        for i in range(0, int(len(offstring)), 5):
+            group.append(offstring[i: i+5])
 
     return fitness
 
