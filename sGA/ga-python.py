@@ -1,6 +1,7 @@
 import numpy as np
 import datetime
 import random
+from tqdm import tqdm
 
 
 # generate new gen
@@ -13,22 +14,18 @@ def create_gen(population_size):
 
 
 # calculate fitness of gen
-def calculate_fitness(gen, target, population_size):
+def calculate_fitness(offstring, option):
     fitness = 0
-    for i in range(population_size):
-        if gen[i:i + 1] == target[i:i + 1]:
-            fitness += 1
-    fitness = fitness / population_size * 100
+    if option == "onemax":
+        fitness = np.sum(offstring)
+    else:
+
     return fitness
 
 
 # create population
 def create_population(target, max_population, population_size):
-    populasi = {}
-    for i in range(max_population):
-        gen = create_gen(population_size)
-        genfitness = calculate_fitness(gen, target, population_size)
-        populasi[gen] = genfitness
+    populasi = np.random.randint(0, 2, size=(max_population, population_size))
     return populasi
 
 
@@ -46,29 +43,31 @@ def selection(populasi):
 
 
 # crossover
-def crossover(parent, target, population_size):
-    child = {}
-    cp = round(len(list(parent)[0]) / 2)
-    for i in range(2):
-        gen = list(parent)[i][:cp] + list(parent)[1 - i][cp:]
-        genfitness = calculate_fitness(gen, target, population_size)
-        child[gen] = genfitness
-    return child
+def crossover(populasi, option):
+    np.random.shuffle(populasi)
+    clone = []
+    if option == "1X":
+        for i in range(0, len(populasi), 2):
+            swap_point = np.random.randint(0, len(populasi[0]))
+            print("swap point" + str(swap_point))
+            clone.append(np.concatenate([populasi[i][:swap_point], populasi[i + 1][swap_point:]]))
+            clone.append(np.concatenate([populasi[i + 1][:swap_point], populasi[i][swap_point:]]))
+    else:
+        for i in range(0, len(populasi), 2):
+            clone.append(populasi[i])
+            clone.append(populasi[i+1])
+            for j in range(0, len(populasi[i])):
+                rand = random.random()
+                if rand >= 0.5:
+                    clone[i][j], clone[i+1][j] = populasi[i+1][j], populasi[i][j]
+    return clone
 
 
-# mutation
-def mutation(child, target, mutation_rate, population_size):
-    mutant = {}
-    for i in range(len(child)):
-        data = list(list(child)[i])
-        for j in range(len(data)):
-            if np.random.rand(1) <= mutation_rate:
-                ch = chr(random.randint(0, 1))
-                data[j] = ch
-        gen = ''.join(data)
-        genfitness = calculate_fitness(gen, target, population_size)
-        mutant[gen] = genfitness
-    return mutant
+# tourament selection
+def tourament_selection(populasi, offstrings):
+    concat = np.concatenate([populasi, offstrings])
+    random.shuffle(concat)
+    for i in range(0, len(concat), 4):
 
 
 # create new population with new best gen
@@ -102,32 +101,19 @@ def display(parent):
 target = ''.rjust(40, '1')
 
 max_population = 2
-mutation_rate = 0.2
 
 print('Target Word :', target)
 print('Max Population :', max_population)
-print('Mutation Rate :', mutation_rate)
 
-population_size = 40
+population_size = 6
 startTime = datetime.datetime.now()
 print('----------------------------------------------')
 print('{}\t\t\t\t\t{}\t{}'.format('The Best', 'Fitness', 'Time'))
 print('-------------------------------------------------------------------')
-
+populasi = create_population(target, int(max_population), population_size)
+offstrings = crossover(populasi, "1X")
+tourament_selection(populasi, offstrings)
+parent = selection(populasi)
+display(parent)
 success = False
-while not success:
-    max_population = max_population * 2
-    populasi = create_population(target, int(max_population), population_size)
-    parent = selection(populasi)
-    display(parent)
-    while 1:
-        child = crossover(parent, target, population_size)
-        mutant = mutation(child, target, float(mutation_rate), population_size)
-        if bestfitness(parent) >= bestfitness(mutant):
-            continue
-        populasi = regeneration(mutant, populasi)
-        parent = selection(populasi)
-        display(parent)
-        print("end of term")
-        if bestfitness(mutant) >= 100:
-            break
+
