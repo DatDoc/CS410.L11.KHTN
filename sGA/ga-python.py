@@ -7,9 +7,6 @@ number_of_chromosome = 4
 max_chromosome = 8192
 randomSeed = 18520573
 
-crossover_type = "1X"
-fitness_func = "onemax"
-
 
 # calculate fitness of gen
 def calculate_fitness(offspring, option):
@@ -44,6 +41,7 @@ def create_population(chromosome_size, population):
 def crossover(populasi, option):
     tmp_pop = populasi.copy()
     np.random.shuffle(tmp_pop)
+    # print(tmp_pop)
     clone = []
     if option == "1X":
         for i in range(0, len(tmp_pop), 2):
@@ -55,22 +53,21 @@ def crossover(populasi, option):
             clone.append(tmp_pop[i])
             clone.append(tmp_pop[i + 1])
             for j in range(0, len(tmp_pop[i])):
-                rand = random.random()
+                rand = np.random.rand()
+                # print(j, " ", rand)
                 if rand >= 0.5:
                     clone[i][j], clone[i + 1][j] = tmp_pop[i + 1][j], tmp_pop[i][j]
     return clone
 
 
-def Popop(population, offspring):
-    return np.concatenate([population, offspring])
+def Popop(population, offsprings):
+    return np.concatenate([population, offsprings])
 
 
 # tourament selection
-def tournament_selection(populasi, offsprings, option):
+def tournament_selection(populasi, option):
     tmp_pop = populasi.copy()
     np.random.shuffle(tmp_pop)
-    # tmp_pop = np.concatenate([populasi, offsprings])
-    # random.shuffle(tmp_pop)
     new_gen = []
     for i in range(0, len(tmp_pop), 4):
         offspring1 = calculate_fitness(tmp_pop[i], option)
@@ -110,8 +107,8 @@ def run(chromosome_size, population, type_of_crossover, type_of_fitness):
             break
         offsprings = crossover(populasi, type_of_crossover)  # 2 types of crossover: UX and 1X
         popop = Popop(populasi, offsprings)
-        new_gen1 = tournament_selection(popop, offsprings, type_of_fitness)
-        new_gen2 = tournament_selection(popop, offsprings, type_of_fitness)
+        new_gen1 = tournament_selection(popop, type_of_fitness)
+        new_gen2 = tournament_selection(popop, type_of_fitness)
         populasi = np.concatenate([new_gen1, new_gen2])
         global number_of_calling_fitness
         number_of_calling_fitness = number_of_calling_fitness + number_of_chromosome * 8
