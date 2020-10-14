@@ -1,13 +1,11 @@
 import numpy as np
 import random
+import argparse
 from tqdm import tqdm
 
-population_size = 10
 number_of_chromosome = 4
-target = [1] * population_size
 max_chromosome = 8192
 randomSeed = 18520573
-best_option = 0
 
 crossover_type = "1X"
 fitness_func = "onemax"
@@ -112,11 +110,7 @@ def run(chromosome_size, population, type_of_crossover, type_of_fitness):
             break
         offsprings = crossover(populasi, type_of_crossover)  # 2 types of crossover: UX and 1X
         popop = Popop(populasi, offsprings)
-        # print(offsprings)
-        # print("-----")
         new_gen1 = tournament_selection(popop, offsprings, type_of_fitness)
-        # print(offsprings)
-        # print("-------")
         new_gen2 = tournament_selection(popop, offsprings, type_of_fitness)
         populasi = np.concatenate([new_gen1, new_gen2])
         global number_of_calling_fitness
@@ -125,8 +119,23 @@ def run(chromosome_size, population, type_of_crossover, type_of_fitness):
 
 
 if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-population_size", "--number of parameters", required=True, type=int, help="number of parameters")
+    ap.add_argument("-function_type", "--function type", required=True, help="Type of function")
+    ap.add_argument("-crossover_type", "--crossover type", required=True, help="Type of crossover")
+    args = vars(ap.parse_args())
+    population_size = args["number of parameters"]
+    fitness_func = args["function type"]
+    crossover_type = args["crossover type"]
+    f = open('result.txt', 'a')
+    f.write('\n- population_size = {}, fitness function: {}, crossover: {}\n'.format(population_size, fitness_func,
+                                                                                     crossover_type))
+    target = [1] * population_size
+    MRPSs = []
+    number_of_evaluation = []
     for bisection in range(0, 100, 10):
         print('{}-th bisection'.format(int(bisection / 10) + 1))
+        f.write("\t{}-th bisection\n".format(int(bisection / 10) + 1))
         global number_of_calling_fitness
         number_of_calling_fitness = 0
         randomSeed += bisection
@@ -134,6 +143,7 @@ if __name__ == "__main__":
         # STAGE 1
         N_upper = 0
         exceed = False
+        failures = 0
         while True:
             pass_all_seed = True
             for seed in range(randomSeed + 0, randomSeed + 10):
@@ -147,32 +157,59 @@ if __name__ == "__main__":
                 print(number_of_chromosome)
                 print(number_of_calling_fitness)
                 N_upper = number_of_chromosome
-
+                f.write("\t\t\tN_upper after stage 1: {}\n".format(N_upper))
                 break
             number_of_chromosome = number_of_chromosome * 2
             if number_of_chromosome > max_chromosome:
                 print("ERROR: CROSS THE LIMIT OF NUMBER OF MAXIMUM CHROMOSOME")
+                f.write("\t\t\tN_upper exceed 8192\n")
                 exceed = True
+                failures += 1
                 break
 
-    # STAGE 2
-    if exceed:
-        continue
-    else:
-        N_lower = N_upper / 2
-        while (N_upper - N_lower) / N_upper > 0.1:
-            N = int((N_upper + N_lower) / 2)
-            past_all_test = True
-            for i in range(group + 0, group + 10):
-                np.random.seed(i)
-                result = Run(N_upper, l, tour_size, type_func, type_cross, k)
-                if not is_Success(result):
-                    past_all_test = False
+        # STAGE 2
+        if exceed:
+            continue
+        else:
+            N_lower = N_upper / 2
+            while (N_upper - N_lower) / N_upper > 0.1:
+                N = int((N_upper + N_lower) / 2)
+                pass_all_seed = True
+                for i in range(randomSeed + 0, randomSeed + 10):
+                    np.random.seed(i)
+                    result = run(N, population_size, crossover_type, fitness_func)
+                    if not is_success(result, target):
+                        pass_all_seed = False
+                        break
+
+                if pass_all_seed:
+                    N_upper = N
+                else:
+                    N_lower = N
+                if N_upper - N_lower <= 2:
                     break
+        MRPSs.append(N_upper)
+        avg_failures = number_of_calling_fitness / (10 - failures)
+        number_of_evaluation.append(avg_failures)
+        print('MRPS: {}'.format(N_upper))
+        f.write("\t\t\tMRPS: {}\n".format(N_upper))
+        print('Average number of evaluations: {}'.format(avg_failures))
+        f.write("\t\t\tAverage number of evaluations: {}\n".format(avg_failures))
 
-            if past_all_test == True:
-                N_upper = N
-            else:
-                N_lower = N
-            if N_upper - N_lower <= 2:
-                break
+    if len(MRPSs) != 0:
+        mean_MRPS = np.mean(MRPSs).round(2)
+        print('Mean MRPS: {}'.format(mean_MRPS))
+        f.write('\tMean MRPS: {}\n'.format(mean_MRPS))
+
+        std_MRPS = np.std(MRPSs).round(2)
+        print('std MRPS: {}'.format(std_MRPS))
+        f.write('\tstd MRPS: {}\n'.format(std_MRPS))
+
+        mean_eval = np.mean(number_of_evaluation).round(2)
+        print('Mean number of evalution: {}'.format(mean_eval))
+        f.write('\tMean number of evalution: {}\n'.format(mean_eval))
+
+        std_eval = np.std(number_of_evaluation).round(2)
+        print('std number of evaluations: {}'.format(std_eval))
+        f.write('\tstd number of evaluations: {}\n'.format(std_eval))
+
