@@ -137,7 +137,7 @@ if __name__ == "__main__":
         randomSeed += bisection
         population_size = 4
 
-        # STAGE 1
+        # STAGE 1: find upper bound
         N_upper = 0
         exceed = False
         failures = 0
@@ -164,7 +164,7 @@ if __name__ == "__main__":
                 failures += 1
                 break
 
-        # STAGE 2
+        # STAGE 2: find MRPS
         if exceed:
             continue
         else:
