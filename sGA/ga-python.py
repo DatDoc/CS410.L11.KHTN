@@ -160,7 +160,7 @@ if __name__ == "__main__":
                 break
             population_size = population_size * 2
             if population_size > max_population:
-                print("ERROR: CROSS THE LIMIT OF NUMBER OF MAXIMUM CHROMOSOME")
+                print("ERROR: CROSS THE LIMIT OF NUMBER OF MAXIMUM POPULATION")
                 f.write("\t\t\tN_upper exceed 8192\n")
                 exceed = True
                 failures += 1
