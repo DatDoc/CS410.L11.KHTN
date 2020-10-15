@@ -114,11 +114,13 @@ if __name__ == "__main__":
     ap.add_argument("-chromosome_size", "--number of chromosome", required=True, type=int, help="number of chromosome")
     ap.add_argument("-fitness_type", "--fitness type", required=True, help="Type of fitness function")
     ap.add_argument("-crossover_type", "--crossover type", required=True, help="Type of crossover")
+    ap.add_argument("-path", "--save path", required=True, help="Save result to path")
     args = vars(ap.parse_args())
     chromosome_size = args["number of chromosome"]
     fitness_type = args["fitness type"]
     crossover_type = args["crossover type"]
-    f = open('result.txt', 'a')
+    path = args["save path"]
+    f = open(path, 'a')
     f.write('\n- chromosome_size = {}, fitness function: {}, crossover: {}\n'.format(chromosome_size, fitness_type,
                                                                                      crossover_type))
     max_population = 8192
