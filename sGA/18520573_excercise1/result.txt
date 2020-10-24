@@ -1,0 +1,832 @@
+
+- chromosome_size = 10, fitness function: onemax, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 32
+			MRPS: 26
+			Average number of evaluations: 3390.4
+	2-th bisection
+			N_upper after stage 1: 32
+			MRPS: 26
+			Average number of evaluations: 3835.2
+	3-th bisection
+			N_upper after stage 1: 32
+			MRPS: 30
+			Average number of evaluations: 2665.6
+	4-th bisection
+			N_upper after stage 1: 32
+			MRPS: 26
+			Average number of evaluations: 2819.2
+	5-th bisection
+			N_upper after stage 1: 32
+			MRPS: 26
+			Average number of evaluations: 3596.8
+	6-th bisection
+			N_upper after stage 1: 32
+			MRPS: 20
+			Average number of evaluations: 3008.0
+	7-th bisection
+			N_upper after stage 1: 64
+			MRPS: 40
+			Average number of evaluations: 6822.4
+	8-th bisection
+			N_upper after stage 1: 64
+			MRPS: 34
+			Average number of evaluations: 9336.0
+	9-th bisection
+			N_upper after stage 1: 32
+			MRPS: 24
+			Average number of evaluations: 3027.2
+	10-th bisection
+			N_upper after stage 1: 32
+			MRPS: 26
+			Average number of evaluations: 3395.2
+	Mean MRPS: 27.8
+	std MRPS: 5.33
+	Mean number of evalution: 4189.6
+	std number of evaluations: 2052.12
+
+- chromosome_size = 20, fitness function: onemax, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 128
+			MRPS: 68
+			Average number of evaluations: 31329.6
+	2-th bisection
+			N_upper after stage 1: 128
+			MRPS: 80
+			Average number of evaluations: 17203.2
+	3-th bisection
+			N_upper after stage 1: 64
+			MRPS: 56
+			Average number of evaluations: 7420.8
+	4-th bisection
+			N_upper after stage 1: 128
+			MRPS: 88
+			Average number of evaluations: 22758.4
+	5-th bisection
+			N_upper after stage 1: 64
+			MRPS: 64
+			Average number of evaluations: 4652.8
+	6-th bisection
+			N_upper after stage 1: 64
+			MRPS: 60
+			Average number of evaluations: 7924.8
+	7-th bisection
+			N_upper after stage 1: 128
+			MRPS: 104
+			Average number of evaluations: 21046.4
+	8-th bisection
+			N_upper after stage 1: 128
+			MRPS: 72
+			Average number of evaluations: 23884.8
+	9-th bisection
+			N_upper after stage 1: 64
+			MRPS: 56
+			Average number of evaluations: 7404.8
+	10-th bisection
+			N_upper after stage 1: 128
+			MRPS: 68
+			Average number of evaluations: 28259.2
+	Mean MRPS: 71.6
+	std MRPS: 14.47
+	Mean number of evalution: 17188.48
+	std number of evaluations: 9205.26
+
+- chromosome_size = 40, fitness function: onemax, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 256
+			MRPS: 160
+			Average number of evaluations: 73849.6
+	2-th bisection
+			N_upper after stage 1: 256
+			MRPS: 160
+			Average number of evaluations: 58531.2
+	3-th bisection
+			N_upper after stage 1: 256
+			MRPS: 192
+			Average number of evaluations: 40766.4
+	4-th bisection
+			N_upper after stage 1: 256
+			MRPS: 208
+			Average number of evaluations: 57886.4
+	5-th bisection
+			N_upper after stage 1: 256
+			MRPS: 224
+			Average number of evaluations: 50337.6
+	6-th bisection
+			N_upper after stage 1: 256
+			MRPS: 224
+			Average number of evaluations: 44011.2
+	7-th bisection
+			N_upper after stage 1: 256
+			MRPS: 208
+			Average number of evaluations: 70492.8
+	8-th bisection
+			N_upper after stage 1: 256
+			MRPS: 224
+			Average number of evaluations: 67056.0
+	9-th bisection
+			N_upper after stage 1: 512
+			MRPS: 272
+			Average number of evaluations: 172929.6
+	10-th bisection
+			N_upper after stage 1: 256
+			MRPS: 160
+			Average number of evaluations: 61217.6
+	Mean MRPS: 203.2
+	std MRPS: 34.35
+	Mean number of evalution: 69707.84
+	std number of evaluations: 35901.83
+
+- chromosome_size = 80, fitness function: onemax, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 640
+			Average number of evaluations: 329588.8
+	2-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 704
+			Average number of evaluations: 398206.4
+	3-th bisection
+			N_upper after stage 1: 512
+			MRPS: 512
+			Average number of evaluations: 76243.2
+	4-th bisection
+			N_upper after stage 1: 512
+			MRPS: 512
+			Average number of evaluations: 96497.6
+	5-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 704
+			Average number of evaluations: 376193.6
+	6-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 576
+			Average number of evaluations: 553180.8
+	7-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 1280
+			Average number of evaluations: 928902.4
+	8-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 704
+			Average number of evaluations: 438454.4
+	9-th bisection
+			N_upper after stage 1: 512
+			MRPS: 512
+			Average number of evaluations: 88003.2
+	10-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 832
+			Average number of evaluations: 344721.6
+	Mean MRPS: 697.6
+	std MRPS: 218.82
+	Mean number of evalution: 362999.2
+	std number of evaluations: 243689.93
+
+- chromosome_size = 160, fitness function: onemax, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2816
+			Average number of evaluations: 2624740.8
+	2-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2560
+			Average number of evaluations: 2306998.4
+	3-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 2048
+			Average number of evaluations: 893787.2
+	4-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2560
+			Average number of evaluations: 2149425.6
+	5-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3840
+			Average number of evaluations: 1743568.0
+	6-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2304
+			Average number of evaluations: 3031715.2
+	7-th bisection
+			N_upper after stage 1: 8192
+			MRPS: 5120
+			Average number of evaluations: 4631998.4
+	8-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2816
+			Average number of evaluations: 2365814.4
+	9-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3072
+			Average number of evaluations: 1964014.4
+	10-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3328
+			Average number of evaluations: 2141929.6
+	Mean MRPS: 3046.4
+	std MRPS: 844.8
+	Mean number of evalution: 2385399.2
+	std number of evaluations: 919680.75
+
+- chromosome_size = 10, fitness function: onemax, crossover: UX
+	1-th bisection
+			N_upper after stage 1: 32
+			MRPS: 26
+			Average number of evaluations: 2760.0
+	2-th bisection
+			N_upper after stage 1: 16
+			MRPS: 16
+			Average number of evaluations: 724.8
+	3-th bisection
+			N_upper after stage 1: 16
+			MRPS: 16
+			Average number of evaluations: 912.0
+	4-th bisection
+			N_upper after stage 1: 32
+			MRPS: 18
+			Average number of evaluations: 3224.0
+	5-th bisection
+			N_upper after stage 1: 16
+			MRPS: 14
+			Average number of evaluations: 1017.6
+	6-th bisection
+			N_upper after stage 1: 16
+			MRPS: 16
+			Average number of evaluations: 764.8
+	7-th bisection
+			N_upper after stage 1: 16
+			MRPS: 16
+			Average number of evaluations: 920.0
+	8-th bisection
+			N_upper after stage 1: 16
+			MRPS: 16
+			Average number of evaluations: 672.0
+	9-th bisection
+			N_upper after stage 1: 16
+			MRPS: 16
+			Average number of evaluations: 563.2
+	10-th bisection
+			N_upper after stage 1: 32
+			MRPS: 20
+			Average number of evaluations: 2972.8
+	Mean MRPS: 17.4
+	std MRPS: 3.23
+	Mean number of evalution: 1453.12
+	std number of evaluations: 1016.19
+
+- chromosome_size = 20, fitness function: onemax, crossover: UX
+	1-th bisection
+			N_upper after stage 1: 64
+			MRPS: 34
+			Average number of evaluations: 12980.8
+	2-th bisection
+			N_upper after stage 1: 64
+			MRPS: 44
+			Average number of evaluations: 10784.0
+	3-th bisection
+			N_upper after stage 1: 32
+			MRPS: 32
+			Average number of evaluations: 2777.6
+	4-th bisection
+			N_upper after stage 1: 32
+			MRPS: 30
+			Average number of evaluations: 3488.0
+	5-th bisection
+			N_upper after stage 1: 32
+			MRPS: 24
+			Average number of evaluations: 3134.4
+	6-th bisection
+			N_upper after stage 1: 32
+			MRPS: 32
+			Average number of evaluations: 2870.4
+	7-th bisection
+			N_upper after stage 1: 32
+			MRPS: 30
+			Average number of evaluations: 2918.4
+	8-th bisection
+			N_upper after stage 1: 32
+			MRPS: 32
+			Average number of evaluations: 2619.2
+	9-th bisection
+			N_upper after stage 1: 32
+			MRPS: 28
+			Average number of evaluations: 4280.0
+	10-th bisection
+			N_upper after stage 1: 32
+			MRPS: 28
+			Average number of evaluations: 2966.4
+	Mean MRPS: 31.4
+	std MRPS: 4.98
+	Mean number of evalution: 4881.92
+	std number of evaluations: 3562.37
+
+- chromosome_size = 40, fitness function: onemax, crossover: UX
+	1-th bisection
+			N_upper after stage 1: 64
+			MRPS: 52
+			Average number of evaluations: 11782.4
+	2-th bisection
+			N_upper after stage 1: 128
+			MRPS: 68
+			Average number of evaluations: 36465.6
+	3-th bisection
+			N_upper after stage 1: 64
+			MRPS: 60
+			Average number of evaluations: 12243.2
+	4-th bisection
+			N_upper after stage 1: 64
+			MRPS: 52
+			Average number of evaluations: 11075.2
+	5-th bisection
+			N_upper after stage 1: 64
+			MRPS: 60
+			Average number of evaluations: 11640.0
+	6-th bisection
+			N_upper after stage 1: 128
+			MRPS: 68
+			Average number of evaluations: 34820.8
+	7-th bisection
+			N_upper after stage 1: 64
+			MRPS: 52
+			Average number of evaluations: 12908.8
+	8-th bisection
+			N_upper after stage 1: 64
+			MRPS: 48
+			Average number of evaluations: 9259.2
+	9-th bisection
+			N_upper after stage 1: 64
+			MRPS: 56
+			Average number of evaluations: 9592.0
+	10-th bisection
+			N_upper after stage 1: 64
+			MRPS: 48
+			Average number of evaluations: 11104.0
+	Mean MRPS: 56.4
+	std MRPS: 7.03
+	Mean number of evalution: 16089.12
+	std number of evaluations: 9839.59
+
+- chromosome_size = 80, fitness function: onemax, crossover: UX
+	1-th bisection
+			N_upper after stage 1: 128
+			MRPS: 104
+			Average number of evaluations: 41252.8
+	2-th bisection
+			N_upper after stage 1: 128
+			MRPS: 96
+			Average number of evaluations: 38358.4
+	3-th bisection
+			N_upper after stage 1: 128
+			MRPS: 96
+			Average number of evaluations: 26377.6
+	4-th bisection
+			N_upper after stage 1: 128
+			MRPS: 96
+			Average number of evaluations: 41848.0
+	5-th bisection
+			N_upper after stage 1: 128
+			MRPS: 88
+			Average number of evaluations: 37966.4
+	6-th bisection
+			N_upper after stage 1: 256
+			MRPS: 136
+			Average number of evaluations: 104200.0
+	7-th bisection
+			N_upper after stage 1: 128
+			MRPS: 104
+			Average number of evaluations: 38580.8
+	8-th bisection
+			N_upper after stage 1: 128
+			MRPS: 80
+			Average number of evaluations: 31804.8
+	9-th bisection
+			N_upper after stage 1: 128
+			MRPS: 104
+			Average number of evaluations: 34030.4
+	10-th bisection
+			N_upper after stage 1: 128
+			MRPS: 72
+			Average number of evaluations: 43259.2
+	Mean MRPS: 97.6
+	std MRPS: 16.32
+	Mean number of evalution: 43767.84
+	std number of evaluations: 20718.33
+
+- chromosome_size = 160, fitness function: onemax, crossover: UX
+	1-th bisection
+			N_upper after stage 1: 128
+			MRPS: 128
+			Average number of evaluations: 20603.2
+	2-th bisection
+			N_upper after stage 1: 256
+			MRPS: 160
+			Average number of evaluations: 96166.4
+	3-th bisection
+			N_upper after stage 1: 128
+			MRPS: 128
+			Average number of evaluations: 30168.0
+	4-th bisection
+			N_upper after stage 1: 128
+			MRPS: 128
+			Average number of evaluations: 36297.6
+	5-th bisection
+			N_upper after stage 1: 256
+			MRPS: 160
+			Average number of evaluations: 101486.4
+	6-th bisection
+			N_upper after stage 1: 256
+			MRPS: 176
+			Average number of evaluations: 112380.8
+	7-th bisection
+			N_upper after stage 1: 256
+			MRPS: 144
+			Average number of evaluations: 132585.6
+	8-th bisection
+			N_upper after stage 1: 256
+			MRPS: 160
+			Average number of evaluations: 112531.2
+	9-th bisection
+			N_upper after stage 1: 256
+			MRPS: 144
+			Average number of evaluations: 137369.6
+	10-th bisection
+			N_upper after stage 1: 256
+			MRPS: 176
+			Average number of evaluations: 112809.6
+	Mean MRPS: 150.4
+	std MRPS: 17.82
+	Mean number of evalution: 89239.84
+	std number of evaluations: 41267.62
+
+- chromosome_size = 10, fitness function: trap, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 256
+			MRPS: 136
+			Average number of evaluations: 42665.6
+	2-th bisection
+			N_upper after stage 1: 256
+			MRPS: 144
+			Average number of evaluations: 37180.8
+	3-th bisection
+			N_upper after stage 1: 128
+			MRPS: 112
+			Average number of evaluations: 11436.8
+	4-th bisection
+			N_upper after stage 1: 128
+			MRPS: 80
+			Average number of evaluations: 13099.2
+	5-th bisection
+			N_upper after stage 1: 128
+			MRPS: 120
+			Average number of evaluations: 15798.4
+	6-th bisection
+			N_upper after stage 1: 128
+			MRPS: 88
+			Average number of evaluations: 14998.4
+	7-th bisection
+			N_upper after stage 1: 128
+			MRPS: 88
+			Average number of evaluations: 13646.4
+	8-th bisection
+			N_upper after stage 1: 128
+			MRPS: 104
+			Average number of evaluations: 12929.6
+	9-th bisection
+			N_upper after stage 1: 256
+			MRPS: 240
+			Average number of evaluations: 29382.4
+	10-th bisection
+			N_upper after stage 1: 256
+			MRPS: 136
+			Average number of evaluations: 42921.6
+	Mean MRPS: 124.8
+	std MRPS: 43.85
+	Mean number of evalution: 23405.92
+	std number of evaluations: 12491.25
+
+- chromosome_size = 20, fitness function: trap, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 512
+			MRPS: 288
+			Average number of evaluations: 108656.0
+	2-th bisection
+			N_upper after stage 1: 256
+			MRPS: 224
+			Average number of evaluations: 26140.8
+	3-th bisection
+			N_upper after stage 1: 512
+			MRPS: 288
+			Average number of evaluations: 115129.6
+	4-th bisection
+			N_upper after stage 1: 256
+			MRPS: 240
+			Average number of evaluations: 31275.2
+	5-th bisection
+			N_upper after stage 1: 256
+			MRPS: 160
+			Average number of evaluations: 41612.8
+	6-th bisection
+			N_upper after stage 1: 256
+			MRPS: 240
+			Average number of evaluations: 36316.8
+	7-th bisection
+			N_upper after stage 1: 512
+			MRPS: 288
+			Average number of evaluations: 126027.2
+	8-th bisection
+			N_upper after stage 1: 512
+			MRPS: 352
+			Average number of evaluations: 84508.8
+	9-th bisection
+			N_upper after stage 1: 256
+			MRPS: 256
+			Average number of evaluations: 34872.0
+	10-th bisection
+			N_upper after stage 1: 512
+			MRPS: 320
+			Average number of evaluations: 104203.2
+	Mean MRPS: 265.6
+	std MRPS: 51.2
+	Mean number of evalution: 70874.24
+	std number of evaluations: 38262.7
+
+- chromosome_size = 40, fitness function: trap, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 512
+			MRPS: 512
+			Average number of evaluations: 62206.4
+	2-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 768
+			Average number of evaluations: 248408.0
+	3-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 640
+			Average number of evaluations: 254513.6
+	4-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 1088
+			Average number of evaluations: 746932.8
+	5-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 1088
+			Average number of evaluations: 770008.0
+	6-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 896
+			Average number of evaluations: 242851.2
+	7-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 768
+			Average number of evaluations: 314043.2
+	8-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 1088
+			Average number of evaluations: 719305.6
+	9-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 640
+			Average number of evaluations: 265302.4
+	10-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 1088
+			Average number of evaluations: 784902.4
+	Mean MRPS: 857.6
+	std MRPS: 210.71
+	Mean number of evalution: 440847.36
+	std number of evaluations: 264417.82
+
+- chromosome_size = 80, fitness function: trap, crossover: 1X
+	1-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2816
+			Average number of evaluations: 1607435.2
+	2-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3072
+			Average number of evaluations: 1641089.6
+	3-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3584
+			Average number of evaluations: 1548441.6
+	4-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2304
+			Average number of evaluations: 1965902.4
+	5-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3328
+			Average number of evaluations: 1696300.8
+	6-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3072
+			Average number of evaluations: 1527369.6
+	7-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3328
+			Average number of evaluations: 1517636.8
+	8-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3328
+			Average number of evaluations: 1620724.8
+	9-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 2048
+			Average number of evaluations: 572425.6
+	10-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2304
+			Average number of evaluations: 2101768.0
+	Mean MRPS: 2918.4
+	std MRPS: 501.66
+	Mean number of evalution: 1579909.44
+	std number of evaluations: 382582.37
+
+- chromosome_size = 160, fitness function: trap, crossover: 1X
+	1-th bisection
+			N_upper exceed 8192
+	2-th bisection
+			N_upper exceed 8192
+	3-th bisection
+			N_upper after stage 1: 8192
+			MRPS: 8192
+			Average number of evaluations: 2787217.6
+	4-th bisection
+			N_upper exceed 8192
+	5-th bisection
+			N_upper exceed 8192
+	6-th bisection
+			N_upper exceed 8192
+	7-th bisection
+			N_upper exceed 8192
+	8-th bisection
+			N_upper exceed 8192
+	9-th bisection
+			N_upper exceed 8192
+	10-th bisection
+			N_upper after stage 1: 8192
+			MRPS: 8192
+			Average number of evaluations: 2932774.4
+	Mean MRPS: 8192.0
+	std MRPS: 0.0
+	Mean number of evalution: 2859996.0
+	std number of evaluations: 72778.4
+
+- chromosome_size = 10, fitness function: trap, crossover: UX
+	1-th bisection
+			N_upper after stage 1: 512
+			MRPS: 416
+			Average number of evaluations: 75627.2
+	2-th bisection
+			N_upper after stage 1: 512
+			MRPS: 320
+			Average number of evaluations: 75302.4
+	3-th bisection
+			N_upper after stage 1: 512
+			MRPS: 480
+			Average number of evaluations: 68404.8
+	4-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 576
+			Average number of evaluations: 211404.8
+	5-th bisection
+			N_upper after stage 1: 512
+			MRPS: 416
+			Average number of evaluations: 69356.8
+	6-th bisection
+			N_upper after stage 1: 256
+			MRPS: 256
+			Average number of evaluations: 22505.6
+	7-th bisection
+			N_upper after stage 1: 256
+			MRPS: 256
+			Average number of evaluations: 21982.4
+	8-th bisection
+			N_upper after stage 1: 512
+			MRPS: 352
+			Average number of evaluations: 74604.8
+	9-th bisection
+			N_upper after stage 1: 1024
+			MRPS: 544
+			Average number of evaluations: 219134.4
+	10-th bisection
+			N_upper after stage 1: 512
+			MRPS: 384
+			Average number of evaluations: 79590.4
+	Mean MRPS: 400.0
+	std MRPS: 104.43
+	Mean number of evalution: 91791.36
+	std number of evaluations: 64980.83
+
+- chromosome_size = 20, fitness function: trap, crossover: UX
+	1-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2816
+			Average number of evaluations: 1139534.4
+	2-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 2816
+			Average number of evaluations: 1433452.8
+	3-th bisection
+			N_upper after stage 1: 8192
+			MRPS: 4352
+			Average number of evaluations: 3703209.6
+	4-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 1536
+			Average number of evaluations: 594288.0
+	5-th bisection
+			N_upper after stage 1: 2048
+			MRPS: 2048
+			Average number of evaluations: 364510.4
+	6-th bisection
+			N_upper after stage 1: 8192
+			MRPS: 5120
+			Average number of evaluations: 2276468.8
+	7-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3584
+			Average number of evaluations: 972224.0
+	8-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3328
+			Average number of evaluations: 1499846.4
+	9-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3072
+			Average number of evaluations: 1180075.2
+	10-th bisection
+			N_upper after stage 1: 4096
+			MRPS: 3840
+			Average number of evaluations: 1294360.0
+	Mean MRPS: 3251.2
+	std MRPS: 998.4
+	Mean number of evalution: 1445796.96
+	std number of evaluations: 899714.33
+
+- chromosome_size = 40, fitness function: trap, crossover: UX
+	1-th bisection
+			N_upper exceed 8192
+	2-th bisection
+			N_upper exceed 8192
+	3-th bisection
+			N_upper exceed 8192
+	4-th bisection
+			N_upper exceed 8192
+	5-th bisection
+			N_upper exceed 8192
+	6-th bisection
+			N_upper exceed 8192
+	7-th bisection
+			N_upper exceed 8192
+	8-th bisection
+			N_upper exceed 8192
+	9-th bisection
+			N_upper exceed 8192
+	10-th bisection
+			N_upper exceed 8192
+
+- chromosome_size = 80, fitness function: trap, crossover: UX
+	1-th bisection
+			N_upper exceed 8192
+	2-th bisection
+			N_upper exceed 8192
+	3-th bisection
+			N_upper exceed 8192
+	4-th bisection
+			N_upper exceed 8192
+	5-th bisection
+			N_upper exceed 8192
+	6-th bisection
+			N_upper exceed 8192
+	7-th bisection
+			N_upper exceed 8192
+	8-th bisection
+			N_upper exceed 8192
+	9-th bisection
+			N_upper exceed 8192
+	10-th bisection
+			N_upper exceed 8192
+
+- chromosome_size = 160, fitness function: trap, crossover: UX
+	1-th bisection
+			N_upper exceed 8192
+	2-th bisection
+			N_upper exceed 8192
+	3-th bisection
+			N_upper exceed 8192
+	4-th bisection
+			N_upper exceed 8192
+	5-th bisection
+			N_upper exceed 8192
+	6-th bisection
+			N_upper exceed 8192
+	7-th bisection
+			N_upper exceed 8192
+	8-th bisection
+			N_upper exceed 8192
+	9-th bisection
+			N_upper exceed 8192
+	10-th bisection
+			N_upper exceed 8192
